@@ -1,4 +1,5 @@
-#Time/Space Complexity
+#Time Complexity: O(n)
+#Space Complexity: O(n)
 '''
 Assuming there are n integers in the array, then the time complexity should be O(n), 
 since we are iterating through n integers in the for loop. 
