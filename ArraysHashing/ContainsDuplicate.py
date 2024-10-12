@@ -7,7 +7,7 @@ The space complexity should be O(n) as well, since we are using
 a hashmap which takes up at most n integers.
 '''
 
-def hasDuplicate(nums) -> bool:
+def hasDuplicate(nums):
 
      # Create a hashmap to store each number in the array
      hashmap = {}

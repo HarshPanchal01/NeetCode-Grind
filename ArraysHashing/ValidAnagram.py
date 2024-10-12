@@ -8,7 +8,7 @@ much more simply. Instead of having 3 for loops, I could've just had 1 for loop 
 array s or t, then inside that for loop, both arrays s and t can be accessed alongside their respective hashmaps. 
 '''
 
-def isAnagram(s, t) -> bool:
+def isAnagram(s, t):
 
     # O(1)
     if(len(s) != len(t)):
