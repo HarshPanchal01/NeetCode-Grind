@@ -53,6 +53,6 @@ public class product_array_except_self {
         System.out.println(Arrays.toString(productExceptSelf(nums)));
         System.out.println(Arrays.toString(productExceptSelf(nums2)));
 
-        // time complexity is O(n) and space complexity is O(1)
+        // time complexity is O(n) and space complexity is O(n)
     }
 }
