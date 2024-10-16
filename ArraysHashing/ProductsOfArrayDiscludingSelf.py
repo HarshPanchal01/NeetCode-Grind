@@ -55,28 +55,3 @@ def productsExceptSelf(nums):
 print(productsExceptSelf([-1,0,1,2,3]))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
