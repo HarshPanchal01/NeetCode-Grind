@@ -1,3 +1,10 @@
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+'''
+The time complexity is O(n) because we're doing one pass of the tokens array. The space complexity is O(n) because at worst 
+case the size of the stack can be the same size as tokens.
+'''
+
 class Solution:
 
     def evalRPN(self, tokens):
