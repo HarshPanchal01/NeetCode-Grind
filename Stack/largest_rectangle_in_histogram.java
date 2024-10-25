@@ -25,18 +25,15 @@ public class largest_rectangle_in_histogram {
             largest_area = Math.max(largest_area, stack.size() * height);
             stack.clear();
         }
-
         return largest_area;
         */
-
-	int largest_area = 0;
-	Stack<Integer> stack = new Stack<>(); // Stack to store the indices of bars
+	    int largest_area = 0;
+	    Stack<Integer> stack = new Stack<>(); // Stack to store the indices of bars
 
         // Traverse each bar in the histogram
         for (int i = 0; i <= heights.length; i++) {
             // Set height to 0 if we're at the end, ensuring remaining bars are processed
             int currentHeight = (i == heights.length) ? 0 : heights[i];
-
             // Keep removing bars from stack while the current bar is less than the bar at the stack's top
             while (!stack.isEmpty() && currentHeight < heights[stack.peek()]) {
                 // Pop the top index, which represents the height of the rectangle we’re processing
@@ -50,13 +47,11 @@ public class largest_rectangle_in_histogram {
                 // Calculate the area with the popped height as the smallest bar and update largestArea
                 largest_area = Math.max(largest_area, height * width);
             }
-
             // Push the current index onto the stack
             stack.push(i);
         }
 
         return largest_area;
-
     }
     public static void main(String[] args) {
         int[] heights = {7,1,7,2,2,4}, heights2 = {2,3};
@@ -64,6 +59,6 @@ public class largest_rectangle_in_histogram {
         System.out.println(largestRectangleArea(heights));
         System.out.println(largestRectangleArea(heights2));
 	
-	// time and space complexity will be O(n) as we loop through array and have stack of size n
+	    // time and space complexity will be O(n) as we loop through array and have stack of size n
     }
 }
