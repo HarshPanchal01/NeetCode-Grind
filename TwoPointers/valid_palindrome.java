@@ -22,6 +22,6 @@ public class valid_palindrome {
         System.out.println(isPalindrome(s));
         System.out.println(isPalindrome(s2));
 
-        // time complexity of this is O(log(n)) and the space complexity is O(1)
+        // time complexity of this is O(n) and the space complexity is O(1)
     }    
 }
