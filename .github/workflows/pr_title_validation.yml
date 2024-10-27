@@ -1,0 +1,21 @@
+name: Validate Pull Request Title
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  check-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate Pull Request Title
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          # Regular expression to match "Day <No.> - <name-solution>"
+          if [[ ! "$PR_TITLE" =~ ^Day[[:space:]]+[0-9]+[[:space:]]+-[[:space:]]+[a-zA-Z0-9_-]+$ ]]; then
+            echo "❌ Pull request title does not follow the naming convention: 'Day <No.> - name-solution'."
+            exit 1
+          else
+            echo "✅ Pull request title follows the naming convention."
+          fi
