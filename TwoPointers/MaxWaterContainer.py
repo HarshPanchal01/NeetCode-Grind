@@ -3,7 +3,7 @@
 '''
 This one came acc pretty easily to me lol, no need to see the solns. The time complexity is O(n) because we're
 doing a single half-pass of the array, since the while loop will break once the left and right pointers overtake 
-each other. 
+each other. The space complexity is constant coz we're not using any other extra data structures.  
 '''
 
 def maxArea(heights):
