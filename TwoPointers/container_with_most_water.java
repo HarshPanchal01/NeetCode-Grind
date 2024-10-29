@@ -38,6 +38,6 @@ public class container_with_most_water {
         System.out.println(maxArea(heights));
         System.out.println(maxArea(heights2));
 
-        //  of this would be O(n/2) because of two-pointers but it simplifies to O(n) and the space complexity is O(1)
+        // time complexity of this would be O(n/2) because of two-pointers but it simplifies to O(n) and the space complexity is O(1)
     }
 }
