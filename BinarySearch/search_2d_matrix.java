@@ -16,7 +16,7 @@ public class search_2d_matrix {
         int left = 0, right = (rows * columns) - 1, mid; // pointers for the binary search approach
 
         while (left <= right) { // apply the same binary search approach for left and right not crossing each other
-            mid = (left + right) / 2; // calculate the mid
+            mid = left + (right - left) / 2; // calculate the mid
 
             if (matrix[mid / columns][mid % columns] == target) { // converting the mid to matrix coordinates, mid / columns gives the index for the row and mid % columns gives the column index
                 return true;

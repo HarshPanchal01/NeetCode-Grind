@@ -3,7 +3,7 @@ public class binary_search {
         int mid = 0, left = 0, right = nums.length - 1; // left and right pointers with mid pointer to implement binary search
 
         while (left <= right) { // applying binary search so as long as left and right dont cross each other
-            mid = (left + right) / 2; // get the mid which is the floor value of (left + right) / 2, since in java integers are already rounded down if decimal we dont need floor
+            mid = left + (right - left) / 2; // get the mid which is the floor value of (left + right) / 2, since in java integers are already rounded down if decimal we dont need floor
 
             if (nums[mid] == target) { // if the element at mid is the target return the mid
                 return mid;

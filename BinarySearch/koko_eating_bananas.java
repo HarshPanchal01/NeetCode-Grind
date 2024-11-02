@@ -22,7 +22,7 @@ public class koko_eating_bananas {
         int left = 1, right = Arrays.stream(piles).max().getAsInt(), mid, k = right; // set the pointers for left and right and set k to initially be the max of piles as thats worst case
         // left, right, mid are pointers for the range of k because at worst k will be max pile and at best k is 1
         while (left <= right) { // apply binary search approach so while left and right dont cross each other
-            mid = (left + right) / 2; // calculate the mid point which will be the speed
+            mid = left + (right - left) / 2; // calculate the mid point which will be the speed
             int time_taken = 0; // set the time counter to 0
 
             for (int pile : piles) {
