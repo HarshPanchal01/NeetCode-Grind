@@ -1,8 +1,9 @@
 # Time Complexity: O(p * logn)
 # Space Complexity: O(1)
 '''
-The time complexity is O(p * logn) because we're doing logn iterations where n is the range from 0 to maximum number of bananas in piles, and
-p iterations inside the while loop, where p is the number of piles. The space complexity is O(1) because we're not using any external data structures.
+Yeah, I dont think im cut out for Leetcode man T-T, needed to watch Leetcode soln again smh. The time complexity is O(p * logn) because we're doing logn iterations where 
+n is the range from 0 to maximum number of bananas in piles, and p iterations inside the while loop, where p is the number of piles. 
+The space complexity is O(1) because we're not using any external data structures.
 '''
 
 import math
