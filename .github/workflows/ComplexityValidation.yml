@@ -7,7 +7,7 @@ on:
 jobs:
   changedFiles:
     runs-on: ubuntu-latest
-    name: Test changed-files
+    name: check-changed-files
     permissions:
       pull-requests: read
 
@@ -24,7 +24,7 @@ jobs:
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
           REPO_NAME: ${{ github.repository }}
-          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
             # Only check files with .java or .py extensions
