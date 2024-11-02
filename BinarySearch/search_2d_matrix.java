@@ -12,7 +12,7 @@ public class search_2d_matrix {
         }
         return false;
         */
-        int columns = matrix[0].length - 1, rows = matrix.length - 1; // get the dimensions of the matrix
+        int columns = matrix[0].length, rows = matrix.length; // get the dimensions of the matrix
         int left = 0, right = (rows * columns) - 1, mid; // pointers for the binary search approach
 
         while (left <= right) { // apply the same binary search approach for left and right not crossing each other
