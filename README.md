@@ -1,7 +1,6 @@
 # NeetCode-Grind
 
-Welcome to the NeetCode-Grind repository! This project contains code solutions to the LeetCode roadmap that we are working on together.
-This repository is a collection of code solutions to various LeetCode problems as part of our journey to master coding interview questions. We are following a structured roadmap to ensure we cover all essential topics.
+Welcome to the NeetCode-Grind repository! This repository is a collection of code solutions to various LeetCode problems as part of our journey to master coding interview questions. We are following a structured roadmap to ensure we cover all essential topics.
 
 ## Roadmap
 
