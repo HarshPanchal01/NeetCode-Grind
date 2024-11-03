@@ -3,6 +3,9 @@ name: Validate Pull Request Title and Label
 on:
   pull_request:
     types: [opened, edited]
+  workflow_run:
+    workflows: ["Validate Pull Request Title and Label"]
+    types: [completed]
 
 jobs:
   check-title-and-label:
