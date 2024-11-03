@@ -3,6 +3,7 @@ name: Validate Pull Request Title and Label
 on:
   pull_request:
     types: [opened, edited]
+  workflow_dispatch:  # Allows manual re-run
 
 jobs:
   check-title-and-label:
