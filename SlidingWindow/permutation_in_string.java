@@ -85,6 +85,6 @@ public class permutation_in_string {
         System.out.println(checkInclusion(s1, s2));
         System.out.println(checkInclusion(s1, s3));
 
-        // time complexity is O(m + n) and space is O(1)
+        // time complexity is O(m + n) and space complexity is O(1)
     }
 }
