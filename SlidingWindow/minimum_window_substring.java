@@ -51,5 +51,7 @@ public class minimum_window_substring {
         String s = "OUZODYXAZV", t = "XYZ";
 
         System.out.println(minWindow(s, t));
+
+        // Time complexity: O((n^2) * m) Space complexity: O(m)
     }
 }
