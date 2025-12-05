@@ -1,7 +1,5 @@
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Stack;
 
 public class LRU_cache {
     static class LRUCache {
