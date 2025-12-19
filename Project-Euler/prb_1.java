@@ -6,12 +6,15 @@ public class prb_1 {
             if (i % n == 0 && i % m == 0) {
                 sum += i;
             }
+
             else if (i % n == 0) {
                 sum += i;
             }
+
             else if (i % m == 0) {
                 sum += i;
             }
+            
             else {
                 continue;
             }

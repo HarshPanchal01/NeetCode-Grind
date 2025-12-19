@@ -13,8 +13,14 @@ public class prb_2 {
 
         while (true) {
             int curr = fibonacci_sequence(i);
-            if (curr > range) { break; }
-            if (curr % 2 == 0) { sum += curr; }
+            
+            if (curr > range) { 
+                break; 
+            }
+            
+            if (curr % 2 == 0) { 
+                sum += curr;
+            }
 
             i++;
         }
