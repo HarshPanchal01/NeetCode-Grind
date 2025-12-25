@@ -51,5 +51,7 @@ public class prb_8 {
         int nums_adj = 13;
         
         System.out.println(largest_product_in_series(series, nums_adj));
+
+        // solution: 23514624000
     }
 }
