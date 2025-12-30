@@ -1,22 +1,101 @@
 public class prb_11 {
-    public static int anti_diagonal_max() {
+    public static int anti_diagonal_max(int[][] grid, int adj) {
+        int max_anti_diagonal = 0, curr_anti_diag_product = 0;
+        // String nums = "";
 
+        // this loop will go from top right to bottom left of the grid
+        for (int i = 0; i <= grid.length - adj; i++) {
+            for (int j = grid.length - 1; j >= adj - 1; j--) {
+                curr_anti_diag_product = grid[i][j];
+                // nums = "%d x ".formatted(curr_anti_diag_product);
+                for (int k = 1; k < adj; k++) {
+                    curr_anti_diag_product *= grid[i + k][j - k];
+                    // nums += "%d x ".formatted(grid[i + k][j - k]);
+                }
+                max_anti_diagonal = Math.max(max_anti_diagonal, curr_anti_diag_product);
+                //System.out.println("%s = %d".formatted(nums, curr_anti_diag_product));
+            }
+        }
+
+        System.out.println("Max Anti-Diagonal: " + max_anti_diagonal);
+        return max_anti_diagonal;
     }
 
-    public static int diagonal_max() {
+    public static int diagonal_max(int[][] grid, int adj) {
+        int max_diagonal = 0, curr_diag_product = 0;
+        // String nums = "";
 
+        // this loop will go from top left to bottom left of the grid
+        for (int i = 0; i <= grid.length - adj; i++) {
+            for (int j = 0; j <= grid.length - adj; j++) {
+                curr_diag_product = grid[i][j];
+                // nums = "%d x ".formatted(curr_diag_product);
+                for (int k = 1; k < adj; k++) {
+                    curr_diag_product *= grid[i + k][j + k];
+                    // nums += "%d x ".formatted(grid[i + k][j + k]);
+                }
+                max_diagonal = Math.max(max_diagonal, curr_diag_product);
+                //System.out.println("%s = %d".formatted(nums, curr_diag_product));
+            }
+        }
+
+        System.out.println("Max Diagonal: " + max_diagonal);
+        return max_diagonal;
     }
 
-    public static int horizontal_max() {
+    public static int horizontal_max(int[][] grid, int adj) {
+        int max_horizontal = 0, curr_hori_product = 0;
+        // String nums = "";
 
+        // left to right from top to bottom horizontally across entire grid
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j <= grid.length - adj; j++) {
+                curr_hori_product = grid[i][j];
+                // nums = "%d x ".formatted(curr_hori_product);
+                for (int k = j + 1; k < j + adj; k++) {
+                    curr_hori_product *= grid[i][k];
+                    // nums += "%d x ".formatted(grid[i][k]);
+                }
+                max_horizontal = Math.max(max_horizontal, curr_hori_product);
+                //System.out.println("%s = %d".formatted(nums, curr_hori_product));
+            }
+        }
+
+        System.out.println("Max horizontal: " + max_horizontal);
+        return max_horizontal;
     }
 
-    public static int vertical_max() {
+    public static int vertical_max(int[][] grid, int adj) {
+        int max_vertical = 0, curr_vert_product = 0;
+        // String nums = "";
 
+        // top to bottom from left to right across the entire grid
+        for (int j = 0; j < grid.length; j++) {
+            for (int i = 0; i <= grid.length - adj; i++) {
+                curr_vert_product = grid[i][j];
+                // nums = "%d x ".formatted(curr_vert_product);
+                for (int k = i + 1; k < i + adj; k++) {
+                    curr_vert_product *= grid[k][j];
+                    // nums += "%d x ".formatted(grid[k][j]);
+                }
+                max_vertical = Math.max(max_vertical, curr_vert_product);
+                //System.out.println("%s = %d".formatted(nums, curr_vert_product));
+            }
+        }
+
+        System.out.println("Max vertical: " + max_vertical);
+        return max_vertical;
     }
 
-    public static int max_product_in_number() {
+    public static int max_product_in_grid(int[][] grid, int adj) {
+        int max_product = 0;
 
+        max_product = Math.max(max_product, anti_diagonal_max(grid, adj));
+        max_product = Math.max(max_product, diagonal_max(grid, adj));
+        max_product = Math.max(max_product, horizontal_max(grid, adj));
+        max_product = Math.max(max_product, vertical_max(grid, adj));
+
+        return max_product;
     }
 
     public static void main(String[] args) {
@@ -43,6 +122,10 @@ public class prb_11 {
             { 1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52,  1, 89, 19, 67, 48}
         };
 
-        int[][] 
+        int adj = 4;
+
+        System.out.println(max_product_in_grid(grid, adj));
+
+        // solution: 70600674
     }
 }
