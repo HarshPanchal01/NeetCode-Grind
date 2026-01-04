@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class prb_14 {
     public static long longest_collatz_sequence_in_range(long start, long end) {
         long[] longest_chain = {0, 0}, curr_chain = {0, 0};
